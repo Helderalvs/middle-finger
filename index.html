@@ -11,50 +11,50 @@
             box-sizing: border-box;
         }
         
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
         body {
             background: #000;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
         }
         
         .container {
-            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             animation: fadeIn 0.8s ease-in;
         }
         
         img {
-            max-width: 90vw;
-            max-height: 90vh;
-            object-fit: contain;
-            animation: bounce 1s ease-out;
-            filter: drop-shadow(0 10px 30px rgba(255, 255, 255, 0.3));
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: zoomIn 1s ease-out;
         }
         
         @keyframes fadeIn {
             from { 
                 opacity: 0;
-                transform: translateY(20px);
             }
             to { 
                 opacity: 1;
-                transform: translateY(0);
             }
         }
         
-        @keyframes bounce {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        
-        /* Animation au hover sur desktop */
-        @media (hover: hover) {
-            img:hover {
-                transform: scale(1.1) rotate(5deg);
-                transition: transform 0.3s ease;
+        @keyframes zoomIn {
+            from { 
+                transform: scale(0.8);
+            }
+            to { 
+                transform: scale(1);
             }
         }
     </style>
@@ -64,5 +64,4 @@
         <img src="image.jpg" alt="🖕">
     </div>
 </body>
-
 </html>

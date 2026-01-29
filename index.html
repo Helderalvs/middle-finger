@@ -34,14 +34,12 @@
         }
         
         img {
-            min-width: 100%;
-            min-height: 100%;
+            max-width: 90%;
+            max-height: 90%;
             width: auto;
             height: auto;
-            object-fit: cover;
-            object-position: center;
-            transform: scale(1.5);
-            animation: zoomIn 1s ease-out;
+            object-fit: contain;
+            animation: zoomIn 0.5s ease-out;
         }
         
         @keyframes fadeIn {
@@ -55,35 +53,17 @@
         
         @keyframes zoomIn {
             from { 
-                transform: scale(1.2);
+                transform: scale(0.9);
             }
             to { 
-                transform: scale(1.5);
-            }
-        }
-        
-        /* Pour mobile */
-        @media (max-width: 768px) {
-            img {
-                transform: scale(2);
-            }
-            
-            @keyframes zoomIn {
-                from { 
-                    transform: scale(1.5);
-                }
-                to { 
-                    transform: scale(2);
-                }
+                transform: scale(1);
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="téléchargement.jpg" alt="🖕">
+        <img src="image.jpg" alt="🖕">
     </div>
 </body>
 </html>
-
-

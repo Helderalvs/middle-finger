@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🖕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            text-align: center;
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            animation: bounce 1s ease-out;
+            filter: drop-shadow(0 10px 30px rgba(255, 255, 255, 0.3));
+        }
+        
+        @keyframes fadeIn {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* Animation au hover sur desktop */
+        @media (hover: hover) {
+            img:hover {
+                transform: scale(1.1) rotate(5deg);
+                transition: transform 0.3s ease;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="image.png" alt="🖕">
+    </div>
+</body>
+</html>

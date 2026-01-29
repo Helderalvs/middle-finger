@@ -34,12 +34,20 @@
         }
         
         img {
-            max-width: 90%;
-            max-height: 90%;
+            max-width: 60%;
+            max-height: 60%;
             width: auto;
             height: auto;
             object-fit: contain;
             animation: zoomIn 0.5s ease-out;
+        }
+        
+        /* Pour mobile - encore plus petit */
+        @media (max-width: 768px) {
+            img {
+                max-width: 70%;
+                max-height: 70%;
+            }
         }
         
         @keyframes fadeIn {
